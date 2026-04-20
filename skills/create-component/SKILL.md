@@ -1,13 +1,11 @@
-# create-component
+---
+name: create-component
+description: Scaffold a new registry component with all required files following REGISTRY_RULES.md. Use when the user says "create registry component [name]", "add [name] to the registry", or "scaffold [name]".
+when_to_use: When the user wants to add a new component to the current project's registry.
+allowed-tools: Bash Read Write Edit Glob
+---
 
 Scaffolds a new registry component in the current project following REGISTRY_RULES.md.
-
-## Trigger
-
-Use when:
-- User says "create registry component [name]"
-- User says "add [name] to the registry"
-- User says "scaffold a new component called [name]"
 
 ## Steps
 

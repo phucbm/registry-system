@@ -1,13 +1,11 @@
-# validate-component
+---
+name: validate-component
+description: Validate a registry component against REGISTRY_RULES.md and return a pass/fail report. Use when the user says "validate [name]", "check if [name] is registry-ready", or before push-to-registry runs.
+when_to_use: When checking if a component meets all registry rules before publishing or pushing to another repo.
+allowed-tools: Bash Read Grep Glob
+---
 
 Validates a registry component against REGISTRY_RULES.md. Returns a pass/fail report with actionable fixes.
-
-## Trigger
-
-Use when:
-- User says "validate [component-name]"
-- User says "check if [component] is registry-ready"
-- Before `push-to-registry` runs (called automatically)
 
 ## Steps
 

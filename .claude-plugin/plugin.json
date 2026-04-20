@@ -1,0 +1,13 @@
+{
+  "name": "registry-system",
+  "displayName": "Registry System",
+  "version": "1.0.0",
+  "description": "Claude skills for managing a shadcn-compatible component registry",
+  "author": {
+    "name": "phucbm",
+    "url": "https://github.com/phucbm"
+  },
+  "homepage": "https://github.com/phucbm/registry-system",
+  "repository": "https://github.com/phucbm/registry-system",
+  "license": "MIT"
+}
