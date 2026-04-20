@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hello-world",
+  "type": "registry:component",
+  "title": "Hello World",
+  "description": "A minimal starter component demonstrating the registry convention.",
+  "dependencies": [
+    "clsx",
+    "tailwind-merge"
+  ],
+  "files": [
+    {
+      "path": "registry/example/blocks/hello-world/hello-world.tsx",
+      "type": "registry:component",
+      "target": "components/example/hello-world.tsx"
+    }
+  ]
+}
