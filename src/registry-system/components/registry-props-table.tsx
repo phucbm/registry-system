@@ -1,17 +1,11 @@
-import {generateDefinition, TSDoc} from "nextra/tsdoc";
 import {getRegistryItem} from "@/registry-system/lib/getRegistryItem";
 
-export async function RegistryPropsTable({type, name}: { type?: string, name: string }) {
+export async function RegistryPropsTable({name}: { name: string }) {
     const registryItem = await getRegistryItem(name);
-
-    const propsType = type || `${registryItem.title.replaceAll(' ', '')}Props`;
-
-    const definition = generateDefinition({
-        code: `
-import type { ${propsType} } from '@/${registryItem.files[0].path}'
-export default ${propsType}
-`,
-    });
-
-    return <TSDoc definition={definition}/>;
+    if (!registryItem) return null;
+    return (
+        <p className="text-sm text-[var(--muted-foreground)]">
+            See <code>{registryItem.files?.[0]?.path}</code> for the full props definition.
+        </p>
+    );
 }
