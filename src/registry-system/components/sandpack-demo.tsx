@@ -35,7 +35,10 @@ async function SandpackDemo({
                             }: Props) {
     const files = await getSandpackFiles({registryItem, exampleFileName});
 
-    const dependencies = {};
+    const dependencies: Record<string, string> = {
+        "clsx": "latest",
+        "tailwind-merge": "latest",
+    };
 
     registryItem.dependencies.forEach(dependency => {
         dependencies[dependency] = 'latest';

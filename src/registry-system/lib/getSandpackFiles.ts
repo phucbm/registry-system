@@ -94,6 +94,13 @@ export async function getSandpackFiles({
         };
     });
 
+    // Inject standard utility file so components can import @/lib/utils
+    result["/lib/utils.ts"] = {
+        code: `import { clsx, type ClassValue } from "clsx";\nimport { twMerge } from "tailwind-merge";\n\nexport function cn(...inputs: ClassValue[]) {\n    return twMerge(clsx(inputs));\n}`,
+        readOnly: true,
+        hidden: true,
+    };
+
     // Add tsconfig.json
     result["/tsconfig.json"] = {
         code: `{
